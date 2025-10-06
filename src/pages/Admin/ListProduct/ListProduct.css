@@ -1,0 +1,11 @@
+#list-product img {
+    width: 60px;
+}
+#list-product .search {
+    position: relative;
+}
+#list-product .search1 {
+    position: relative;
+    top: 0;
+    right: 25px;
+}

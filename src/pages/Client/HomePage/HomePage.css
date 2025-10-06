@@ -1,0 +1,69 @@
+/* ===== Card Giới thiệu ===== */
+.card-intro {
+    width: 100%;
+    height: 300px;       /* chiều cao card */
+    border-radius: 15px; /* bo tròn card */
+    overflow: hidden;
+}
+
+.card-intro-img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.card-intro-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 100px;
+}
+
+/* ===== Card Món nổi bật ===== */
+.card-feature {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: fadeInCard 0.3s forwards;
+}
+
+.card-feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-feature-img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 70%;
+}
+
+.card-feature-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30%;
+    text-align: center;
+}
+
+/*menu card*/
+.btn-menu {
+    background-color: #ff7f50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-menu:hover {
+    background-color: #e5673f;
+    color: #fff;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,97 @@
+/* Overlay nền mờ */
+#editProductModal .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    animation: fadeIn 0.2s ease-in;
+}
+
+/* Popup modal */
+#editProductModal .modal-contents {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 800px;
+    animation: slideUp 0.3s ease-out;
+}
+#editProductModal .modal-header {
+    display: block;
+}
+/* Form */
+#editProductModal .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Label */
+#editProductModal .modal-form label {
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 4px;
+}
+
+/* Input / textarea / select */
+
+
+/* Preview ảnh */
+#editProductModal .modal-form img {
+    margin-top: 8px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* Buttons container */
+#editProductModal .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Buttons */
+#editProductModal .modal-buttons button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#editProductModal .modal-buttons .btn-close {
+    background-color: #9ca3af; /* xám */
+    color: white;
+}
+
+#editProductModal .modal-buttons .btn-close:hover {
+    background-color: #6b7280;
+}
+
+#editProductModal .modal-buttons .btn-save {
+    background-color: #1d4ed8; /* xanh dương */
+    color: white;
+}
+
+#editProductModal .modal-buttons .btn-save:hover {
+    background-color: #1e40af;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

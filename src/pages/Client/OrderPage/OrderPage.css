@@ -1,0 +1,17 @@
+.order-page {
+    margin-top: 10px;
+}
+
+.order-page .sidebar {
+    height: 100vh;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+
+.order-page img {
+    object-fit: cover;
+}
+
+.order-page .card {
+    border-radius: 10px;
+}

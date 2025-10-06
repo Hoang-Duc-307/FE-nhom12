@@ -1,0 +1,51 @@
+/* Navbar nền đẹp */
+#nav-container .navbar {
+    background-color: #f8f9fa;
+}
+
+/* Logo */
+#nav-container .img-logo {
+    height: 70px;
+}
+
+/* Màu chữ nav-link */
+#nav-container .nav-link {
+    color: black;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover và active */
+#nav-container .nav-link:hover,
+#nav-container .nav-link.active {
+    color: #12f343; /* màu xanh nổi bật */
+    text-decoration: none;
+}
+
+/* Disabled link */
+#nav-container .nav-link.disabled {
+    color: #6c757d; /* màu xám */
+    pointer-events: none;
+}
+
+
+
+
+#carouselExampleControls {
+    max-height: 600px;
+    overflow: hidden;
+}
+#carouselExampleControls img {
+    height: 100%;
+    object-fit: cover;
+}
+#nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-expand-lg {
+    height: 70px;
+}

@@ -1,0 +1,59 @@
+.footer {
+    background-color: #343a40; /* màu nền đậm */
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    position: relative;
+}
+
+.footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #adb5bd;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.footer-content {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive fix cho các heading và text */
+.footer h5 {
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}

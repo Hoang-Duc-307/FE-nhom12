@@ -1,0 +1,10 @@
+body {
+    padding-top: 22px; /* chiều cao navbar */
+}
+#root input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important; /* đổi màu viền khi focus */
+}
