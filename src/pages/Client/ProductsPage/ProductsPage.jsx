@@ -2,12 +2,15 @@ import React, {useState, useEffect} from "react";
 import {useSelector} from "react-redux";
 import "./ProductsPage.css";
 import ShowProduct from "./ShowProduct";
-import {formatPrice } from "../../../utils/format"
+import {formatPrice} from "../../../utils/format"
 
 const ProductsPage = () => {
     const {clineList} = useSelector((state) => state.products); // list sản phẩm từ DB
     const {enumList} = useSelector((state) => state.enums);
     const [show, setShow] = useState(false);
+
+    const [selectedDish, setSelectedDish] = useState(null);
+
     // console.log(clineList);
     const [activeCategory, setActiveCategory] = useState(null); // Level1
     const [activeSubCategory, setActiveSubCategory] = useState(null); // Level2
@@ -44,7 +47,7 @@ const ProductsPage = () => {
     // Khi click Level1: chọn Level1 và tự động chọn Level2 con đầu tiên
     const handleClickLevel1 = (key) => {
         setActiveCategory(key);
-
+        setShow(false);
         // Lấy danh sách Level2 con của Level1
         const subCats = Object.values(enumList.CategoryLevel2 || {}).filter(
             (c) => c.parentId === enumList.CategoryLevel1[key].id
@@ -55,7 +58,8 @@ const ProductsPage = () => {
     };
 
     // click sản phẩm phóng to
-    const handleClickShow = () => {
+    const handleClickShow = (dish) => {
+        setSelectedDish(dish);
         setShow(true);
     };
 
@@ -83,7 +87,10 @@ const ProductsPage = () => {
                                     <div
                                         key={sub.id}
                                         className={`menu-item ms-4 menu-sub ${activeSubCategory === sub ? "active" : ""}`}
-                                        onClick={() => setActiveSubCategory(sub)}
+                                        onClick={() => {
+                                            setActiveSubCategory(sub);
+                                            setShow(false);
+                                        }}
                                     >
                                         {sub.label}
                                     </div>
@@ -95,10 +102,10 @@ const ProductsPage = () => {
 
             {/* Danh sách món ăn */}
             <div className="dish-list flex-grow-1">
-                <div className="row g-3">
+                <div className="row g-3 position-relative">
                     {displayList.length > 0 ? (
                         displayList.map((dish) => (
-                            <div key={dish.id} className="col-md-4" onClick={handleClickShow}>
+                            <div key={dish.id} className="col-md-4" onClick={() => handleClickShow(dish)}>
                                 <div className="card">
                                     <img
                                         src={`http://localhost:8080/images/${dish.anh}`}
@@ -118,9 +125,12 @@ const ProductsPage = () => {
                     )}
                 </div>
             </div>
-            {show && ShowProduct(
+            {show && (<ShowProduct
+                showOpen={show}
+                showProduct={selectedDish}
+                showClose={() => setShow(false)}
 
-            )}
+            />)}
         </div>
     );
 };
