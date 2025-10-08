@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from "react-redux";
 import "./OrderPage.css"
+import {formatPrice } from "../../../utils/format"
 
 const OrderPage = () => {
     const [cart, setCart] = useState([]);
@@ -111,7 +112,7 @@ const OrderPage = () => {
                                         <div>
                                             <div>{dish.ten_mon}</div>
                                             <div className="text-warning fw-bold">
-                                                {dish.gia} đ
+                                                {formatPrice(dish.gia)}
                                             </div>
                                         </div>
                                     </div>

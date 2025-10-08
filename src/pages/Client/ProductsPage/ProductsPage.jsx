@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {useSelector} from "react-redux";
 import "./ProductsPage.css";
 import ShowProduct from "./ShowProduct";
+import {formatPrice } from "../../../utils/format"
 
 const ProductsPage = () => {
     const {clineList} = useSelector((state) => state.products); // list sản phẩm từ DB
@@ -107,7 +108,7 @@ const ProductsPage = () => {
                                     <div className="card-body">
                                         <h5 className="card-title">{dish.ten_mon}</h5>
                                         <p className="card-text">{dish.mo_ta}</p>
-                                        <p className="text-danger fw-bold">{dish.gia} đ</p>
+                                        <p className="text-danger fw-bold">{formatPrice(dish.gia)}</p>
                                     </div>
                                 </div>
                             </div>

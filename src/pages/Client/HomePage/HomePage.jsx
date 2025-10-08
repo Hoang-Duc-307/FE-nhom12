@@ -3,6 +3,8 @@ import {useDispatch, useSelector} from 'react-redux';
 import {Link} from "react-router-dom";
 
 import * as productSlice from "../../../redux/Slice/productSlice";
+
+import "./HomePage.css"
 import "./HomePage.css"
 
 const HomePage = () => {
