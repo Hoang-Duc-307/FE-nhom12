@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import * as productSlice from "../../../redux/Slice/productSlice";
-
+import {formatPrice} from "../../../utils/format"
 import EditProductModal from "./EditProductModal";
 import "./ListProduct.css"
 
@@ -94,7 +94,7 @@ const ListProduct = () => {
                             className="w-16 h-16 object-cover"
                         />
                     </td>
-                    <td className="border border-gray-300 px-4 py-2">{item.gia}</td>
+                    <td className="border border-gray-300 px-4 py-2">{formatPrice(item.gia)}</td>
                     <td className="border border-gray-300 px-4 py-2">{item.mo_ta}</td>
                     <td className="border border-gray-300 px-4 py-2">{item.don_vi}</td>
                     <td className="border border-gray-300 px-4 py-2">{item.kich_co}</td>

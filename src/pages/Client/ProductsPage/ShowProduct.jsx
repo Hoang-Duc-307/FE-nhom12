@@ -9,7 +9,7 @@ const ShowProduct = ({showOpen,showProduct,showClose}) => {
         <div>
             <div className="card text-white showproduct">
                 <button className="close-btn" onClick={showClose}>×</button>
-                <img src={`http://localhost:8080/images/${showProduct.anh}`} className="card-img" alt="..."/>
+                <img src={`http://localhost:8080/images/${showProduct.anh}`} className="card-img" alt={showProduct.ten_mon}/>
                 <div className="card-img-overlay cart-show">
                     <h5 className="card-title">{showProduct.ten_mon}</h5>
                     <p className="card-text">{showProduct.mo_ta}</p>
