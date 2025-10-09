@@ -1,10 +1,11 @@
 
+/* Page-level background */
+body {
+    background-color: #f6f8fb;
+}
 
 .content {
     background-color: #fff;
-}
-body {
-    background-color: #f8f9fa;
 }
 
 form {
@@ -12,6 +13,23 @@ form {
 }
 
 h2 {
-    color: #0d6efd;
+    color: #0f172a;
+}
+
+.add-product-form {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.add-product-form .form-control,
+.add-product-form .form-select {
+    border-radius: 8px;
+    border: 1px solid #e6edf6;
+}
+
+.add-product-form .btn-primary {
+    background: linear-gradient(90deg,#4f46e5,#6366f1);
+    border: none;
+    box-shadow: 0 6px 18px rgba(79,70,229,0.12);
 }
 

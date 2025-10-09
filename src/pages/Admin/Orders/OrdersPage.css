@@ -1,0 +1,7 @@
+.orders-page .card { box-shadow: 0 6px 18px rgba(14,30,60,0.06); border-radius: 8px; }
+.orders-page h2 { color: #0f172a; }
+.orders-page table th, .orders-page table td { vertical-align: middle; }
+
+.orders-page .form-label { font-size: 13px; font-weight: 600; }
+.orders-page .form-control { border-radius: 6px; }
+.orders-page .card p { margin-bottom: 6px; }

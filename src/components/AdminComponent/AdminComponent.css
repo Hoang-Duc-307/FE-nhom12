@@ -3,6 +3,53 @@
 }
 
 .sidebar {
-    background-color: #f8f9fa;
-    border-right: 1px solid #ddd;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f7fb 100%);
+    border-right: 1px solid #e6e6ef;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.sidebar .admin-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.sidebar .admin-logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.sidebar h4 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar .nav-link {
+    color: #334155;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 120ms ease-in-out;
+    display: block;
+}
+.sidebar .nav-link:hover {
+    background: #eef2ff;
+    color: #1f2937;
+    text-decoration: none;
+}
+.sidebar .nav-link.active {
+    background: #4f46e5;
+    color: white !important;
+}
+
+.sidebar .nav-item + .nav-item {
+    margin-top: 6px;
 }

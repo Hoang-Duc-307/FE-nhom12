@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
 import * as productSlice from "../../../redux/Slice/productSlice";
+import "./AddProductPage.css"
 
 
 const AddProductPage = () => {
@@ -81,7 +82,7 @@ const AddProductPage = () => {
     return (
         <div className="container">
             <h2 className="mb-4 text-center">Thêm Sản Phẩm</h2>
-            <form className="p-4 shadow rounded bg-light" onSubmit={handleSubmit}>
+            <form className="p-4 shadow rounded bg-light add-product-form" onSubmit={handleSubmit}>
                 {/* Tên món */}
                 <div className="mb-3">
                     <label className="form-label">Tên món</label>

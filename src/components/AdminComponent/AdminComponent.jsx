@@ -35,6 +35,16 @@ const AdminComponent = () => {
                         Thêm Người Dùng
                     </NavLink>
                 </li>
+                <li className="nav-item mt-2">
+                    <NavLink
+                        to="/admin/orders"
+                        className={({isActive}) =>
+                            isActive ? "nav-link active" : "nav-link"
+                        }
+                    >
+                        Quản lý Orders
+                    </NavLink>
+                </li>
             </ul>
         </>
     );

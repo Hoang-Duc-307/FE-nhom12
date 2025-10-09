@@ -9,3 +9,33 @@
     top: 0;
     right: 25px;
 }
+
+#list-product .table-auto {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(14, 30, 60, 0.06);
+}
+
+#list-product th, #list-product td {
+    vertical-align: middle;
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+#list-product .search input[type="text"] {
+    width: 100%;
+    max-width: 360px;
+}
+
+#list-product .btn {
+    background: #eef2ff;
+    border: 1px solid #dbeafe;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-right: 6px;
+}
+
+#list-product .btn:hover {
+    transform: translateY(-1px);
+}

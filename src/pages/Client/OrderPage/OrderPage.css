@@ -15,3 +15,6 @@
 .order-page .card {
     border-radius: 10px;
 }
+
+.checkout-card { margin-top: 12px; border-radius: 8px; box-shadow: 0 6px 18px rgba(14,30,60,0.06); }
+.checkout-card .form-label { font-weight: 600; font-size: 14px; }

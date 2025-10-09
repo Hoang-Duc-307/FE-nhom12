@@ -5,6 +5,7 @@ import AboutPage from "../pages/Client/AboutPage/AboutPage";
 import AddProductPage from "../pages/Admin/AddProductPage/AddProductPage";
 import AddUserPage from "../pages/Admin/AddUserPage/AddUserPage";
 import ListProduct from "../pages/Admin/ListProduct/ListProduct";
+import OrdersPage from "../pages/Admin/Orders/OrdersPage";
 
 export const routes = [
     {
@@ -30,6 +31,11 @@ export const routes = [
     {
         path: '/admin',
         page: ListProduct,
+        layout: 'admin',
+    },
+    {
+        path: '/admin/orders',
+        page: OrdersPage,
         layout: 'admin',
     },
     {

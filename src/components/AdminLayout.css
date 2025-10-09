@@ -1,0 +1,11 @@
+.admin-header h3 {
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.admin-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border: 1px solid #eef2ff;
+    border-radius: 8px;
+    min-height: 60vh;
+}
