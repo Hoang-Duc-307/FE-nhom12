@@ -10,10 +10,17 @@ const ListProduct = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [searchKeyword, setSearchKeyword] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
     const dispatch = useDispatch();
 
     const displayList = searchKeyword.trim() ? searchList : list;
 
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = displayList.slice(indexOfFirstItem, indexOfLastItem);
+
+    const totalPages = Math.ceil(displayList.length / itemsPerPage);
     const handleSearchChange = (e) => {
         const value = e.target.value;
         setSearchKeyword(value); // cập nhật input ngay
@@ -84,7 +91,7 @@ const ListProduct = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {displayList && displayList.length > 0 ? (displayList.map((item, index) => (<tr key={index}>
+                {currentItems && currentItems.length > 0 ? (currentItems.map((item, index) => (<tr key={index}>
                     <td className="border border-gray-300 px-4 py-2">{item.id}</td>
                     <td className="border border-gray-300 px-4 py-2">{item.ten_mon}</td>
                     <td className="border border-gray-300 px-4 py-2">
@@ -130,6 +137,20 @@ const ListProduct = () => {
                 </tr>)}
                 </tbody>
             </table>
+        </div>
+        {/* Nút phân trang */}
+        <div className="pagination mt-3 d-flex justify-content-center">
+            {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                    key={i + 1}
+                    className={`btn mx-1 ${
+                        currentPage === i + 1 ? "btn-primary" : "btn-outline-primary"
+                    }`}
+                    onClick={() => setCurrentPage(i + 1)}
+                >
+                    {i + 1}
+                </button>
+            ))}
         </div>
 
         {isModalOpen && (<EditProductModal
