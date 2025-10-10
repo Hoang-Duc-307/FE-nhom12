@@ -85,12 +85,12 @@ const HeaderComponent = () => {
             <div id="carouselExampleControls" className="carousel slide mt-5 " data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active"><img
-                        src="/images/banh-cuon-hinh-anh-mon-an-dac-san-viet-nam.jpg" className="d-block w-100"
+                        src="/images/z7101710459756_b9706b09051487bff7c7588fba59eb32.jpg" className="d-block w-100"
                         alt="..."/></div>
-                    <div className="carousel-item"><img src="/images/Saodieu - 10 mon an 3.jpg" className="d-block w-100"
+                    {/* <div className="carousel-item"><img src="/images/Saodieu - 10 mon an 3.jpg" className="d-block w-100"
                                                         alt="..."/></div>
                     <div className="carousel-item"><img src="/images/images.jpg" className="d-block w-100" alt="..."/>
-                    </div>
+                    </div> */}
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev"><span className="carousel-control-prev-icon" aria-hidden="true"></span>

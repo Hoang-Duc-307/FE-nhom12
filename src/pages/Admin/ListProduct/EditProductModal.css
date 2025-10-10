@@ -68,21 +68,22 @@
 }
 
 #editProductModal .modal-buttons .btn-close {
-    background-color: #9ca3af; /* xám */
-    color: white;
+    background-color: #f3f4f6 !important; /* light gray */
+    color: #374151 !important; /* dark text */
+    border: 1px solid #e5e7eb !important;
 }
 
 #editProductModal .modal-buttons .btn-close:hover {
-    background-color: #6b7280;
+    background-color: #e9ecef !important;
 }
 
 #editProductModal .modal-buttons .btn-save {
-    background-color: #1d4ed8; /* xanh dương */
-    color: white;
+    background-color: #10b981 !important; /* green-500 */
+    color: white !important;
 }
 
 #editProductModal .modal-buttons .btn-save:hover {
-    background-color: #1e40af;
+    background-color: #059669 !important; /* green-600 */
 }
 
 /* Animations */

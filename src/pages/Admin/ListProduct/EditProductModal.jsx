@@ -230,11 +230,11 @@ const EditProductModal = ({isOpen, onClose, product}) => {
                             </div>
                         )}
 
-                        <div className="d-flex mt-3">
-                            <button type="button" className="btn btn-secondary w-50 me-2" onClick={onClose}>
+                        <div className="d-flex mt-3 modal-buttons">
+                            <button type="button" className="btn btn-secondary w-50 me-2 btn-close" onClick={onClose}>
                                 Đóng
                             </button>
-                            <button type="submit" className="btn btn-primary w-50 ms-2">
+                            <button type="submit" className="btn btn-primary w-50 ms-2 btn-save">
                                 Lưu thay đổi
                             </button>
                         </div>
